@@ -1,3 +1,9 @@
+def decode(encoded):
+    decoded_password = ""
+    for char in encoded:
+        new_c = str((int(char)-3)%10)
+        decoded_password += new_c
+    return decoded_password
 
 def encode(password):
     temp = []
@@ -26,6 +32,5 @@ if __name__ == '__main__':
         elif user_selection == 2:  # runs user_password into decode function
             # TODO: function to decode
             pass
-
         elif user_selection == 3: # terminates the program
             x = 1
